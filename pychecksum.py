@@ -13,12 +13,12 @@ import json
 import os
 import hashlib
 
+
 def check_file(data):
-    print(f'Filename: {data["filename"]}')
-    print(f'Filename: {data["MD5"]}')
+    ''' Function that will check each file. '''
 
     # Check if file exist
-    if os.path.exists(data["filename"]) :
+    if os.path.exists(data["filename"]):
         with open(data["filename"], 'rb') as file:
             file_hash = hashlib.md5()
             while True:
@@ -64,14 +64,14 @@ def main():
         except ValueError as error:
             print(f'Not a valid JSON file. Error {error}')
             quit()
-    
+
     # Check if there is a files keyin JSON
     if 'files' not in data:
         print('Not a valid JSON file. files key do not exist')
         quit()
-    
+
     # Check if there are files
-    if len(data["files"]) < 1 :
+    if len(data["files"]) < 1:
         print('No files to process.')
         quit()
 
