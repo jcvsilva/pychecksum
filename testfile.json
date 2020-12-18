@@ -1,16 +1,15 @@
 {
-    "filesxx":
+    "files":
     [
         {
-            "filename": "first.exe",
-            "MD5": "jhg456jhg67jhg78",
-            "SHA-1": "lkj64567lkhj56kl8g67jh8g67j8h67g8lçkjh897lkjh"
+            "filename": "FGT_61E-v6-build1010-FORTINET.out",
+            "MD5": "f3014912f7a1e4c42980cf5cbc9a1077",
+            "SHA-512": "e519db5f88166457a4a4093e9496fd54f2001d919d5c130855394cad6d0c7ab15cf0a1f132913d4f7193fba9a06ed8a1d282d33adbb9465f4ec9d1023c40f915"
         },
         {
             "filename": "second.exe",
             "MD5": "jhg456jhg67jhg78",
             "SHA-1": "lkj64567lkhj56kl8g67jh8g67j8h67g8lçkjh897lkjh"
         }
-    ],
-    "filesx": []
+    ]
 }

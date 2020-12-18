@@ -10,11 +10,31 @@
 import logging
 import argparse
 import json
-
-
+import os
+import hashlib
 
 def check_file(data):
-    print(data)
+    print(f'Filename: {data["filename"]}')
+    print(f'Filename: {data["MD5"]}')
+
+    # Check if file exist
+    if os.path.exists(data["filename"]) :
+        with open(data["filename"], 'rb') as file:
+            file_hash = hashlib.md5()
+            while True:
+                block = file.read(8192)
+                if not block:
+                    break
+                file_hash.update(block)
+        print(file_hash.hexdigest())
+        if file_hash.hexdigest() == data["MD5"]:
+            return True
+        else:
+            return False
+    else:
+        print("File don't exist.")
+        return False
+
 
 def main():
     """Main program function."""
@@ -40,21 +60,26 @@ def main():
     with open(args.file) as jsonfile:
         try:
             data = json.load(jsonfile)
-            print(data)
+            logging.debug(f'json data: {data}')
         except ValueError as error:
             print(f'Not a valid JSON file. Error {error}')
             quit()
     
+    # Check if there is a files keyin JSON
+    if 'files' not in data:
+        print('Not a valid JSON file. files key do not exist')
+        quit()
+    
     # Check if there are files
-    num_of_files = len(data["files"])
-    if (len(data["files"]) < 1) and data["files"]:
+    if len(data["files"]) < 1 :
         print('No files to process.')
         quit()
 
     for x in data["files"]:
-        check_file(x)
-
-    
+        if check_file(x):
+            print(f"MD5 do ficheiro {x['filename']} está correcto.")
+        else:
+            print(f"MD5 do ficheiro {x['filename']} está errado.")
 
 
 if __name__ == "__main__":
