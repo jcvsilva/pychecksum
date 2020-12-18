@@ -131,3 +131,6 @@ dmypy.json
 # Some more venv stuff
 Scripts/
 pyvenv.cfg
+
+# Example files
+*.out
