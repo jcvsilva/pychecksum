@@ -7,9 +7,19 @@
             "SHA-512": "e519db5f88166457a4a4093e9496fd54f2001d919d5c130855394cad6d0c7ab15cf0a1f132913d4f7193fba9a06ed8a1d282d33adbb9465f4ec9d1023c40f915"
         },
         {
-            "filename": "second.exe",
-            "MD5": "jhg456jhg67jhg78",
-            "SHA-1": "lkj64567lkhj56kl8g67jh8g67j8h67g8lçkjh897lkjh"
+            "filename": "FGT_61E-v6-build1579-FORTINET.out",
+            "MD5": "01bc54c686b35ae2c483af175c98782d",
+            "SHA-512": "b2e00600a67aa09970918b908ffc148c19ad87824c77dd1233f9b01a71dc398d4d85f3abd03e089c3d6e8d75ee66a856fedd0ea0b94de07f8bb8f66ebe37f5f9"
+        },
+        {
+            "filename": "FGT_61E-v6-build1723-FORTINET.out",
+            "MD5": "c7c4d8cfa3efec18d443c782a397b856",
+            "SHA-512": "aeabd865adcb8aec775452d4acee682f9e7fe14b2343c0261c89b85486798ec587038a1c4ee907cf1a61d41c0eb1d3f66b8e3ba24d0f8829e8c068f482936e3c"
+        },
+        {
+            "filename": "FGT_61E-v6-build1803-FORTINET.out",
+            "MD5": "8810ba34823a97d745aab32a5ceff837",
+            "SHA-512": "ce1d03ded4f1c12dfdc01606b456ac7fac255a9bf8995b7b71762633949164c5c33fd1308bd31f8bf284f8204142380e072689dd6f666633d71e0548f074f3c0"
         }
     ]
 }
